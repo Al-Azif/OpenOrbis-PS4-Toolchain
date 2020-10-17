@@ -32,7 +32,7 @@ ARG OO_TOOLCHAIN_VERSION
 # Download the latest Linux release and extract to the $OO_PS4_TOOLCHAIN directory
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN mkdir -p $OO_PS4_TOOLCHAIN/ && \
-    curl -sL https://github.com/OpenOrbis/OpenOrbis-PS4-Toolchain/releases/download/$OO_TOOLCHAIN_VERSION/$OO_TOOLCHAIN_VERSION.tar.gz | \
+    curl -sL https://github.com/Al-Azif/OpenOrbis-PS4-Toolchain/releases/download/$OO_TOOLCHAIN_VERSION/$OO_TOOLCHAIN_VERSION.tar.gz | \
     tar -xz -C $OO_PS4_TOOLCHAIN/ bin/data bin/linux include lib scripts LICENSE link.x
 
 # RUNTIME STAGE: The final stage where the magic happens
